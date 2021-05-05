@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<title>Демонстрация плагина FancyBox	</title>
+	<title>Clock</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script>
+		!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+	</script>
+	<script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+ 	<link rel="stylesheet" href="style.css" />
+ 	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			*   Examples - images
+			*/
+
+			$("a#example1").fancybox();
+
+			$("a#example2").fancybox({
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic'
+			});
+
+			$("a#example3").fancybox({
+				'transitionIn'	: 'none',
+				'transitionOut'	: 'none'	
+			});
+
+			$("a#example4").fancybox({
+				'opacity'		: true,
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'none'
+			});
+
+			$("a#example5").fancybox();
+
+			$("a#example6").fancybox({
+				'titlePosition'		: 'outside',
+				'overlayColor'		: '#000',
+				'overlayOpacity'	: 0.9
+			});
+
+			$("a#example7").fancybox({
+				'titlePosition'	: 'inside'
+			});
+
+			$("a#example8").fancybox({
+				'titlePosition'	: 'over'
+			});
+
+			$("a[rel=example_group]").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'titlePosition' 	: 'over',
+				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+				}
+			});
+
+			/*
+			*   Examples - various
+			*/
+
+			$("#various1").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+
+			$("#various2").fancybox();
+
+			$("#various3").fancybox({
+				'width'				: '75%',
+				'height'			: '75%',
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+
+			$("#various4").fancybox({
+				'padding'			: 0,
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+		});
+	</script>
+	
+	
+	<script>
+     
+       function clockTimer()
+{
+  var date = new Date();
+  
+  var time = [date.getHours(),date.getMinutes(),date.getSeconds(),date.getDate(),date.getMonth(),date.getYear()]; 
+  var dayOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+  var days = date.getDay();
+  
+  if(time[0] < 10){time[0] = "0"+ time[0];}
+  if(time[1] < 10){time[1] = "0"+ time[1];}
+  if(time[2] < 10){time[2] = "0"+ time[2];}
+  
+  var current_time = [time[0],time[1],time[2]].join(':');
+  var clock = document.getElementById("clock");
+  var day = document.getElementById("dayOfWeek");
+  
+  clock.innerHTML = current_time;
+  day.innerHTML = dayOfWeek[days];
+ 
+  
+  
+  setTimeout("clockTimer()", 1000);
+}
+    
+        
+        
+        
+        
+  </script>
+    <div id="radiobells_container"><a href="https://www.radiobells.com/" rel="nofollow" id="RP_link">Онлайн радио</a> #radiobells_script_hash</div><link  href="https://www.radiobells.com/script/style.css" type="text/css" rel="stylesheet" /><script type="text/javascript">var rad_backcolor="#434242"; var rad_logo = "black"; var rad_autoplay = false; var rad_width = "responsive"; var rad_width_px = 330;var rad_stations =[['https://emgregion.hostingradio.ru:8064/moscow.europaplus.mp3','Европа плюс','europaplus'],['http://air3.radiorecord.ru:8000/rr_320','Радио Рекорд','radiorecord'],['https://nashe1.hostingradio.ru/nashe-256','Наше радио','nashe'],['https://pub0302.101.ru:8443/stream/air/aac/64/100','Авторадио','avtoradio'],['http://ic7.101.ru:8000/a99?','Радио Energy','nrj'],['https://online.kissfm.ua/KissFM_HD','Kiss FM','kissfm']];</script><script type="text/javascript" src="https://www.radiobells.com/script/v2_1.js" charset="UTF-8"></script>
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    
+    
+    
+</head>
+<body onload="clockTimer();">
+ <div class="clockpage">
+    
+      <span id="clock"></span>
+      <span id="dayOfWeek"></span>
+      
+    </div>
+
+
+
+<div id="content">
+	<h1>ДЕМОНСТРАЦИЯ  <span>FANCYBOX</span></h1>
+
+	<p>Дурбайлов А.А. 18ПИ </p>
+<hr/>
+	
+
+	<p>
+		Различные анимации<br />
+
+		<a id="example1" href="./example/1b.jpg" >   <img class="hov" alt="example1" src="./example/1s.jpg" /></a>
+            
+        
+            
+		<a id="example2" href="./example/2_b.jpg"><img class="hov" alt="example2" src="./example/2_s.jpg" /></a>
+		
+		<a id="example2" href="./example/3_b.jpg"><img class="hov" alt="example2" src="./example/3_s.jpg" /></a>
+
+		<a id="example3" href="./example/4_b.jpg"><img class="hov" alt="example3" src="./example/4_s.jpg" /></a>
+		
+		
+		
+	</p>
+<hr/>
+	<p>
+		Различные маленькие позиции<br />
+
+		<a id="example5" href="./example/5_b.jpg" ><img class="hov" alt="example4" src="./example/5_s.jpg" /></a>
+		
+		<a id="example6" href="./example/6_b.jpg" ><img class="hov" alt="example5" src="./example/6_s.jpg" /></a>
+
+		<a id="example7" href="./example/7_b.jpg" ><img class="hov" alt="example6" src="./example/7_s.jpg" /></a>
+
+		<a id="example8" href="./example/8_b.jpg" ><img class="hov" class="last" alt="example7" src="./example/8_s.jpg" /></a>
+		
+		
+		
+	</p>
+<hr/>
+	<p>
+		Создание галереи (можно использовать прокручивание мыши)<br />
+<a rel="example_group" href="./example/9_b.jpg" ><img class="hov" alt="" src="./example/9_s.jpg" /></a>
+
+		<a rel="example_group" href="./example/10_b.jpg" title=""><img class="hov" alt="" src="./example/10_s.jpg" /></a>
+
+		<a rel="example_group" href="./example/11_b.jpg" title=""><img class="hov" alt="" src="./example/11_s.jpg" /></a>
+		
+		<a rel="example_group" href="./example/12_b.jpg" title=""><img class="hov" class="last" alt="" src="./example/12_s.jpg" /></a>
+		
+	</p>
+
+	
+</div>
+
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-12" >
+    <h2 class="text-center"> Комментарии</h2> 
+    </div>
+      <div
+        class="col-lg-6">
+       <div id="comment-field"></div>
+      </div>
+      <div class="col-lg-6">
+          <form >
+              <div class="form-group">
+    <label for="comment-name">Имя</label>
+    <input type="name" class="form-control" id="comment-name" placeholder="Your name">
+              </div>
+    <div class="form-group">
+        
+    <label for="comment-body">Коммент</label>
+    <input type="name" class="form-control" id="comment-body" placeholder="Your comment">    
+    </div>
+
+  <div class="form-group text-right">
+     <button type="submit" id="comment-add" class="btn btn-primary">Оставить</button>
+  </div>
+ 
+          </form>
+      </div>
+   </div>
+    
+</div>
+
+
+
+<script>
+    
+    let comments = [];
+    
+loadComments();
+document.getElementById('comment-add').onclick = function()
+{
+    event.preventDefault();
+    let commentName = document.getElementById('comment-name');
+    let commentBody = document.getElementById('comment-body');
+
+    let comment = {
+        name : commentName.value,
+        body : commentBody.value,
+        time : Math.floor(Date.now() / 1000)
+    }
+    commentName.value = '';
+    commentBody.value = '';
+
+    comments.push(comment);
+    saveComments();
+    showComments();
+}
+
+function saveComments(){
+    localStorage.setItem('comments', JSON.stringify(comments));
+}
+
+function loadComments(){
+    if (localStorage.getItem('comments')) comments = JSON.parse(localStorage.getItem('comments'));
+    showComments();
+}
+
+function showComments (){
+    let commentField = document.getElementById('comment-field');
+    let out = '';
+    comments.forEach(function(item){
+        out += `<p class="text-right small"><em>${timeConverter(item.time)}</em></p>`;
+        out += `<p class="alert alert-primary" role="alert">${item.name}</p>`;
+        out += `<p class="alert alert-success" role="alert">${item.body}</p>`;
+    });
+    commentField.innerHTML = out;
+}
+
+function timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    return time;
+  }
+
+    </script>
+
+
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+ 
+ 
+</body>
+
+
+
+</html>

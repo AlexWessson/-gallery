@@ -1,0 +1,144 @@
+html, body, div, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    color: #262626;
+	background: #FFF5EE;
+	font: normal 12px/18px Times New Roman, sans-serif;
+}
+
+#content {
+    width: 600;
+	margin: 40px auto 0 auto;
+	padding: 1 900px 30px 60px;
+	border: solid 1px #cbcbcb;
+	background-color: bisque;
+	-moz-box-shadow: 0px 0px 10px #cbcbcb;
+	-webkit-box-shadow: 0px 0px 10px #cbcbcb;
+}
+
+
+
+
+
+.clock{
+    font-family: 'digital-7';
+    color: red;
+    font-size: 100px;
+    text-align: center;
+    
+}
+
+
+
+
+#log {
+  height: 120px;
+  width: 350px;
+  display: block;
+  box-sizing: border-box;
+}
+
+#container {
+  border: 1px solid brown;
+  padding: 10px;
+  width: 330px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+
+.clockpage
+{
+  margin: auto;
+  max-width: 500px;
+  min-width: 100px;
+  background: white;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 32px;
+  padding: 10px;
+  font-weight: bold;
+  border-top: 10px solid #55c49f;
+  margin-top: 100px;
+}
+#dayOfWeek
+{
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+h1 {
+    
+	margin: 30px 100 15px 100;
+	font-size: 30px;
+	font-weight: lighter;
+	font-family: Arial;
+}
+
+h1 span {
+    text-indent: 20em;
+	font-size: 50%;
+	letter-spacing: -0.05em;
+}
+
+hr {
+	border: none;
+	height: 10px; line-height: 1px;
+	background-color: cadetblue;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+p {
+    
+	margin: 6;
+	padding: 0px 150px;
+    position: relative;
+}
+
+
+
+a {
+     
+	outline: none;
+    
+}
+
+
+
+
+a img {
+    
+    
+    
+	border: 1px solid #BBB;
+	padding: 2px;
+	margin: 10px 20px 10px 20px;
+	vertical-align: top;
+    
+    position: relative;
+}
+
+a img.last {
+	margin-right: 0;	
+}
+
+ul {
+	margin-bottom: 24px;
+	padding-left: 30px;
+}
+
+.hov {
+transition: filter .7s ease-in-out;
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+}
+
+.hov:hover {
+-webkit-filter: grayscale(99%);
+filter: grayscale(99%);
+}
